@@ -1,0 +1,9 @@
+$('#todo_list tbody').prepend(`
+  <tr>
+    <td><%= j(escape_javascript(@todo.title)) %></td>
+    <td><%= j(escape_javascript(@todo.detail)) %></td>
+    <td><%= link_to 'もっと詳しく', @todo %></td>
+    <td><%= link_to '編集', edit_todo_path(@todo) %></td>
+    <td><%= link_to '削除', @todo, method: :delete, data: { confirm: '削除しますか？' } %></td>
+  </tr>
+`);

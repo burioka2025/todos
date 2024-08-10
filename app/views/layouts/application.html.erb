@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>  </head>
+
+  <body>
+    <div style="display: flex;">
+      <div style="width:200px">
+        <h1>メニュー</h1>
+      <ul>
+        <li><%= link_to "プロジェクト", "/projects" %></li>
+        <li><%= link_to "タスク", "/todos" %></li>
+      </ul>
+      </div>
+      <div style="flex: 1;">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

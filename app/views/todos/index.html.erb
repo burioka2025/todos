@@ -1,0 +1,65 @@
+
+
+<h1>やることリスト</h1>
+<%= link_to new_todo_path do %>
+  <button class="create_button" >新規作成</button>
+<% end %>
+<p id="notice"><%= notice %></p>
+ <%= form_with model: @new_todo, local: false do |form| %>
+    <table>
+      <tr>
+        <td class="field">
+          <%= form.label :name %>
+          <%= form.collection_select :project_id, @projects, :id, :name, prompt: true %>
+        </td>
+        <td class="field">
+          <%= form.label :title %>
+          <%= form.text_field :title %>
+        </td>
+        <td class="field">
+          <%= form.label :detail %>
+          <%= form.text_field :detail %>
+        </td>
+        <td>
+          <div class="actions">
+            <%= form.submit "作成" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+<table id="todo_list">
+  <thead>
+    <tr>
+      <th>見出し</th>
+      <th>詳細</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.detail %></td>
+        <td>
+          <%= link_to todo do %>
+            <button>もっと詳しく</button>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_todo_path(todo) do %>
+            <button>編集</button>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to todo, method: :delete do %>
+            <button>削除</button>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
