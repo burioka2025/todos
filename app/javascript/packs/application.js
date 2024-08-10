@@ -8,6 +8,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "jquery"
 import 'bootstrap'
+import '../stylesheets/application';
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
