@@ -22,6 +22,7 @@ class TodosController < ApplicationController
 
   # GET /todos/1/edit
   def edit
+    @projects = Project.all
   end
 
   # POST /todos or /todos.json

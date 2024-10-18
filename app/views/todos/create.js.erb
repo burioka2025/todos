@@ -7,3 +7,14 @@ $('#todo_list tbody').prepend(`
     <td><%= link_to '削除', @todo, method: :delete, data: { confirm: '削除しますか？' } %></td>
   </tr>
 `);
+
+
+$('#todo_list tbody').prepend(`
+  <tr>
+    <td>サーフィン</td>
+    <td>ああああいいいいい</td>
+    <td><%= link_to 'もっと詳しく', @todo %></td>
+    <td><%= link_to '編集', http://www...... %></td>
+    <td><%= link_to '削除', @todo, method: :delete, data: { confirm: '削除しますか？' } %></td>
+  </tr>
+`);

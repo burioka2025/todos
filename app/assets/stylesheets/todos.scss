@@ -10,11 +10,30 @@
 }
 .create_button:hover{
   background-color: blue;
+  width: 760px;
 }
 .actions input[type="submit"]{
   margin: 2d0px 10px 10px 10px;
   background-color: skyblue;
   border-radius: 5px;
   width: 100px;
-  height: 40px;
+  height: 100px;
+}
+.direct_form{
+  background-color:rgb(211, 211, 211);
+  padding:8px;
+}
+#side_menu ul {
+  margin-top:36px;
+  list-style: none;
+  padding-left:10px;
+}
+#side_menu ul li{
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+#side_menu ul li a{
+  color: blue;
+  text-decoration:underline; 
+  text-underline-offset: 3px;
 }

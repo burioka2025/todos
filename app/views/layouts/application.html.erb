@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,21 +7,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>  </head>
+    <%= javascript_pack_tag 'application' %>
+  </head>
 
   <body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 mt-0">
-      <h1>メニュー</h1>
-      <ul>
-        <li><%= link_to "プロジェクト", "/projects" %></li>
-        <li><%= link_to "タスク", "/todos" %></li>
-      </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 mt-1" id="side_menu">
+          <h1>メニュー</h1>
+          <ul class="mt-4">
+            <li><%= link_to "プロジェクト", "/projects" %></li>
+            <li><%= link_to "タスク", "/todos" %></li>
+          </ul>
+        </div>
+        <div class="col-8">
+          <%= yield %>
+        </div>
+      </div>
     </div>
-    <div class="col-md-8">
-      <%= yield %>
-    </div>
-  </div>
-</div>
+  </body>
 </html>
