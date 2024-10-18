@@ -20,7 +20,8 @@
   height: 100px;
 }
 .direct_form{
-  background-color:rgb(211, 211, 211);
+  /*background-color:rgb(211, 211, 211);*/
+  border-color:rgb(211, 211, 211);
   padding:8px;
 }
 #side_menu ul {
@@ -36,4 +37,18 @@
   color: blue;
   text-decoration:underline; 
   text-underline-offset: 3px;
+}
+.edit_button{
+  margin: 2d0px 10px 10px 10px;
+  background-color: skyblue;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+}
+.delete_button{
+  margin: 2d0px 10px 10px 10px;
+  background-color: skyblue;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
 }
